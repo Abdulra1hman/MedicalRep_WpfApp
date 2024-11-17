@@ -1,0 +1,58 @@
+﻿<Window x:Class="WpfApp6.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="303*"></RowDefinition>
+            <RowDefinition Height="131*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,34" Grid.RowSpan="2" >
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 30">
+                <Label >ID</Label>
+                <TextBox Name="id" Width="150"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 30">
+                <Label>Title</Label>
+                <TextBox Name="title" Width="150"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 30">
+                <Label>Description</Label>
+                <TextBox Name="Description" Width="150"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 30">
+                <Label>Statues</Label>
+                <ComboBox Width="150" Name="Statues">
+                    <ComboBoxItem Content="Open"></ComboBoxItem>
+                    <ComboBoxItem Content="Completed"></ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+
+
+
+            <StackPanel Orientation="Horizontal">
+                <Label>Student ID</Label>
+                <TextBox Name="Student_id" Width="150"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Width="150" Height="40" Click="Add_Assigment">Add</Button>
+                <Button Width="150" Height="40" Click="update_Assigment">update</Button>
+                <Button Width="150" Height="40" Click="delete_assigment">Delete</Button>
+            </StackPanel>
+
+        </StackPanel>
+
+
+        <DataGrid Name="Assigments" Grid.Row="1" AutoGenerateColumns="True" Margin="0,82,0,8" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>
